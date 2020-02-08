@@ -1,10 +1,6 @@
 # A Whole World of BERT
 ## Multilingual BERT, or language-specific implementations?
 
-Table of contents:
-
-{:toc}
-
 ### BERT and XLM-R create word embeddings in multiple languages
 
 [In November 2018](https://ai.googleblog.com/2018/11/open-sourcing-bert-state-of-art-pre.html), Google released their NLP library BERT (named after their technique to create pre-trained word embeddings: *Bidirectional Encoder Representations from Transformers*) with English and Chinese models.
@@ -28,7 +24,9 @@ The current standard to measure multilingual language models is the *Cross-Lingu
 **Who has State of the Art performance on XNLI?**
 Currently, both XLM-R models outperform the original mBERT across multiple languages.
 
-performance on XNLI: lg = number of languages, bolded number is best result in language column
+![Table of mBERT and XLM models in multiple languages](/images/xnli_table.png)
+
+*performance on XNLI: lg = number of languages, bolded number is best result in language column*
 
 Interestingly, when comparing MLM training on 17 languages or 100 languages, you can see that performance on English and other languages drops. This helps explain why NLP developers will use monolingual or limited language models, instead of always using multilingual models.
 
@@ -44,20 +42,22 @@ Update: another paper on language relationships and how these are perceived diff
 ### Developers make language-specific BERTs to outperform mBERT
 In November 2019, researchers at Facebook AI, Inria, and Sorbonne Université published a French monolingual model, with an improvement over mBERT and XLM on the XLNI test. They named it CamemBERT, after a French cheese.
 
+![Table of CamemBERT performance](/images/camembert_table.png)
+
 > [CamemBERT: a Tasty French Language Model](https://arxiv.org/abs/1911.03894)
 
 This is part of an explosion of other language-specific BERTs (some have no match in XLNI, so they use other metrics)
 
 - [German BERT](https://deepset.ai/german-bert), from Deepset.AI, Germany (this predates and was footnoted by CamemBERT)
-  [berts](https://github.com/dbmdz/berts/blob/master/README.md) a newer release by *Die Bayerische Staatsbibliothek*, Germany
+- [berts](https://github.com/dbmdz/berts/blob/master/README.md) a newer release by *Die Bayerische Staatsbibliothek*, Germany
 - [Flaubert](https://github.com/getalp/Flaubert), French, from Getalp, France
 - [BETO](https://github.com/dccuchile/beto), Spanish, from *Universidad de Chile*
 - [BERTje](https://arxiv.org/abs/1912.09582), Dutch, from *Rijksuniversiteit Groningen*, Netherlands
 - [FinBERT](https://arxiv.org/abs/1912.07076), Finnish, from *Turun yliopisto*, Finland
 - [AlBERTo](https://github.com/marcopoli/AlBERTo-it), Italian, from *Università degli Studi di Bari Aldo Moro*, Italy
 (this predates CamemBERT, but was not as widely shared)
-+ [GilBERTo](https://github.com/idb-ita/GilBERTo), Italy
-+ [UmBERTo](https://github.com/musixmatchresearch/umberto), MusixMatch, Italy
+- [GilBERTo](https://github.com/idb-ita/GilBERTo), Italy
+- [UmBERTo](https://github.com/musixmatchresearch/umberto), MusixMatch, Italy
 - [BERT-Japanese](https://github.com/cl-tohoku/bert-japanese), from 東北大学, Japan
 - [Portuguese-BERT](https://github.com/neuralmind-ai/portuguese-bert), from NeuralMind.ai, Brazil
 - [RuBERT](https://arxiv.org/abs/1905.07213), Russian, from Физтех, Russia
